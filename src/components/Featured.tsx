@@ -1,8 +1,6 @@
 import { featuredProducts } from "@/data";
 import Image from "next/image";
 import React from "react";
-import Link from "next/link";
-import { pizzas } from "@/data";
 
 const Featured = () => {
   return (
@@ -10,9 +8,8 @@ const Featured = () => {
       <div className="w-max flex ">
         {/* single item */}
         {featuredProducts.map((item) => (
-          <Link
+          <div
             key={item.id}
-            href={`/menu/${pizzas.id}`}
             className="md:w-[50vw] p-4 hover:bg-fuchsia-50 md:h-[60vw] xl:w-[33vw] xl:h-[54vw] w-screen h-[60vh] flex flex-col items-center justify-around"
           >
             {/* Image container */}
@@ -30,7 +27,7 @@ const Featured = () => {
                      Add to cart
               </button>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     </div>
