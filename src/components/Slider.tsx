@@ -23,12 +23,12 @@ const data = [
 const Slider = () => {
   const[slider, setSlider] = useState(0) 
 
-//   useEffect(()=> {
-//     const interval = setInterval(()=>{ 
-//       setSlider((prev)=> (prev === data.length-1 ? 0 : prev+1 ))
-//     },2000)
-//     return ()=> clearInterval(interval); 
-// },[])
+  useEffect(()=> {
+    const interval = setInterval(()=>{ 
+      setSlider((prev)=> (prev === data.length-1 ? 0 : prev+1 ))
+    },2000)
+    return ()=> clearInterval(interval); 
+},[])
   
 
   return (
