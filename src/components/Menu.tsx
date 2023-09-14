@@ -18,7 +18,7 @@ const Menu = () => {
       {open ? (
         <Image
           onClick={() => setOpen(false)}
-          src="/close.png "
+          src="/close.png"
           className="cursor-pointer"
           height={20}
           width={20}
@@ -28,13 +28,13 @@ const Menu = () => {
         <Image
           onClick={() => setOpen(true)}
           className="cursor-pointer"
-          src="/open.png "
+          src="/open.png"
           height={20}
           width={20}
           alt=""
         />
       )}
-      {open && <div className="bg-yellow-300 w-full z-10 text-xl flex gap-10 flex-col items-center justify-center absolute left-0 h-[calc(100vh-6rem)]">
+      {open && <div className="bg-yellow-300 w-full mt-2 z-10 text-xl flex gap-10 flex-col items-center justify-center absolute left-0 h-[calc(100vh-6rem)]">
         {links.map((link) => (
           <Link onClick={() => setOpen(false)} key={link.id} href={link.url}>
             {link.title}
